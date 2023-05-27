@@ -1,0 +1,22 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+}
+
+body{
+    position: relative;
+    background-color: #08222e;
+}
+
+.frame{
+    position:absolute;
+    left: calc(50% - 187px);
+    top: calc(50% - 333px);
+}

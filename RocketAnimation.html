@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+        html {
+            box-sizing: border-box;
+        }
+        
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+        
+        html, body {
+            height: 100%;
+        }
+        
+        body{
+            position: relative;
+            background-color: #08222e;
+        }
+        
+        .frame{
+            position:absolute;
+            left: calc(50% - 187px);
+            top: calc(50% - 333px);
+        }
+        </style>
+    </head>
+
+    <body>
+       
+        <div class= "frame">
+            <div class="loader">
+                <div class="loader-ring"></div>
+                <div class="rocket-wrapper">
+                    <div class="trial-wrapper">
+                        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freeiconspng.com%2Fimages%2Frocket-png&psig=AOvVaw3Zuqk0OZPPYJPUhtLeCdo0&ust=1685189052603000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCMDb1834kv8CFQAAAAAdAAAAABAJ" alt="" class="trial" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
+
+<script>
+    var tl = new TimelineMax({repeat: -1,repeatDelay: 0});
+        tl.from('.cloud',1, {alpha:0}).to('.rocket-wrapper',3, {y: -400,ease: expo.easeIn }).to('.cloud',3, { attr: { cy:185},ease:expo.easeIn}, "-=3").set('.cloud',{clearProps:"all"}).set('.rocket-wrapper',{y:450})
+</script>
